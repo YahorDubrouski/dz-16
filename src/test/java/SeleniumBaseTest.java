@@ -15,7 +15,7 @@ public class SeleniumBaseTest {
     public void setUp() throws MalformedURLException {
         System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         FirefoxOptions firefoxOptions = new FirefoxOptions();
-        driver = new RemoteWebDriver(new URL("http://localhost:4444"), firefoxOptions);
+        driver = new RemoteWebDriver(new URL("http://firefox:4444"), firefoxOptions);//TODO move to config
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
